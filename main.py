@@ -4,7 +4,7 @@ from flask import Flask, render_template
 import requests
 app=Flask(__name__)
 
-API_KEY = open("API_KEY.txt").read()
+API_KEY = open("API_KEY.txt").read().strip
 URL= f"https://api.openweathermap.org/data/2.5/weather?q=London&appid={API_KEY}&units=metric"
 
 
